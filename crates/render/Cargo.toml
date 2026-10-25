@@ -1,0 +1,13 @@
+[package]
+name = "folio-render"
+description = "Raster and vector stroke rendering, page templates."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+folio-nmdl.workspace = true
+tiny-skia.workspace = true
+png.workspace = true

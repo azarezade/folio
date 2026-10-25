@@ -1,0 +1,12 @@
+[package]
+name = "folio-pdfout"
+description = "Streaming PDF writer for raster and vector notebook pages."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+folio-render.workspace = true
+flate2.workspace = true

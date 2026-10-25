@@ -1,0 +1,24 @@
+[package]
+name = "folio-cli"
+description = "The `folio-cli` command-line tool: convert, sync, inspect, bench."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "folio-cli"
+path = "src/main.rs"
+
+[dependencies]
+folio-core.workspace = true
+folio-kdf.workspace = true
+clap.workspace = true
+libc.workspace = true
+png.workspace = true
+folio-render.workspace = true
+folio-device.workspace = true
+folio-library.workspace = true
+tiny_http.workspace = true
+serde_json.workspace = true

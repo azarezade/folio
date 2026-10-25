@@ -1,0 +1,21 @@
+[package]
+name = "folio-library"
+description = "Library index, cache, thumbnails and the sync engine."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+folio-nmdl.workspace = true
+folio-device.workspace = true
+folio-kfx.workspace = true
+serde.workspace = true
+blake3.workspace = true
+rusqlite.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+folio-device = { workspace = true, features = ["virtual"] }

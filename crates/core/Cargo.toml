@@ -1,0 +1,26 @@
+[package]
+name = "folio-core"
+description = "Job system, progress events and the public API used by the UI and CLI."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+folio-kdf.workspace = true
+folio-nmdl.workspace = true
+folio-library.workspace = true
+folio-kfx.workspace = true
+folio-pdfout.workspace = true
+folio-render.workspace = true
+blake3.workspace = true
+lopdf.workspace = true
+folio-device.workspace = true
+png.workspace = true
+serde_json.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+lopdf.workspace = true
+folio-kfx.workspace = true

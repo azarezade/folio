@@ -1,0 +1,16 @@
+# Build output
+/target/
+/fuzz/target/
+/fuzz/corpus/
+/fuzz/artifacts/
+
+# Your notebooks and books, and everything made from them (reference dumps,
+# renders). Never commit personal content.
+/fixtures/
+
+# Generated at build time
+/app/src-tauri/gen/
+/app/src-tauri/THIRD_PARTY_NOTICES.txt
+
+# macOS
+.DS_Store

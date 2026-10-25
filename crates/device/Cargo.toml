@@ -1,0 +1,20 @@
+[package]
+name = "folio-device"
+description = "Kindle over MTP: transport, discovery, ptpcamerad handling."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+bytes.workspace = true
+futures.workspace = true
+mtp-rs.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+
+[features]
+# Kindle::open_virtual, a folder posing as a Kindle (for tests)
+virtual = ["mtp-rs/virtual-device"]

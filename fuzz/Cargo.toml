@@ -1,0 +1,32 @@
+[package]
+name = "folio-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+license = "GPL-3.0-or-later"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "=0.4.13"
+folio-ion = { path = "../crates/ion" }
+folio-nmdl = { path = "../crates/nmdl" }
+
+# Not part of the main workspace: fuzzing needs nightly (`cargo +nightly fuzz run …`).
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "ion_read"
+path = "fuzz_targets/ion_read.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "stroke_codec"
+path = "fuzz_targets/stroke_codec.rs"
+test = false
+doc = false
+bench = false

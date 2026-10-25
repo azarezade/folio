@@ -1,0 +1,207 @@
+/* Folio design tokens (the design canvas's Tokens and Components boards).
+   Light values on :root; dark under [data-theme="dark"], or the system
+   setting unless the app forces light. Components use these only. */
+
+:root {
+  /* Surfaces */
+  --fo-bg-window: #ffffff;
+  --fo-bg-sidebar: #eeeef0;
+  --fo-bg-canvas: #e6e6e9;
+  --fo-bg-group: #f5f5f7;
+  --fo-bg-popover: #ffffff;
+  --fo-paper: #ffffff;
+  --fo-ink: #333333;
+
+  /* Text */
+  --fo-label: #1d1d1f;
+  --fo-label-2: #5f5f64; /* secondary text, ≥ 4.5:1 */
+  --fo-label-3: #8e8e93; /* icons and disabled only */
+
+  /* Lines and fills */
+  --fo-separator: rgba(0, 0, 0, 0.09);
+  --fo-fill: rgba(0, 0, 0, 0.05);
+  --fo-fill-2: rgba(0, 0, 0, 0.09);
+  --fo-selection: rgba(0, 0, 0, 0.08);
+
+  /* Controls (Components board) */
+  --fo-control: #ffffff;
+  --fo-control-border: rgba(0, 0, 0, 0.16);
+  --fo-segment-on: #ffffff;
+  --fo-on-accent: #ffffff;
+  --fo-knob: #ffffff;
+
+  /* Accent and status */
+  --fo-accent: #0a63d1;
+  --fo-accent-text: #0a5cc2;
+  --fo-success: #1e7f3a;
+  --fo-success-solid: #1e8f42;
+  --fo-success-fill: rgba(30, 127, 58, 0.11);
+  --fo-warning: #9a5200;
+  --fo-warning-fill: rgba(214, 130, 0, 0.12);
+  --fo-danger: #c4161c;
+  --fo-danger-text: #b3141a;
+  --fo-danger-solid: #c4161c;
+  --fo-danger-fill: rgba(196, 22, 28, 0.09);
+  --fo-highlight: rgba(255, 214, 10, 0.45);
+
+  /* Book covers without an image (ItemCard), chosen by title */
+  --fo-cover-1: #7a3e3e;
+  --fo-cover-2: #3e5c4a;
+  --fo-cover-3: #3e4f7a;
+  --fo-cover-4: #6b5a3a;
+  --fo-cover-5: #5a3e6b;
+  --fo-cover-6: #3a5f6b;
+  --fo-cover-text: #ffffff;
+
+  /* Reading themes for reflowable books (drawn inside the book's frame) */
+  --fo-reading-paper-bg: #ffffff;
+  --fo-reading-paper-fg: #1f1f1f;
+  --fo-reading-sepia-bg: #f4ecd8;
+  --fo-reading-sepia-fg: #5b4636;
+  --fo-reading-night-bg: #1e1e1f;
+  --fo-reading-night-fg: #e6e4df;
+
+  /* Elevation */
+  --fo-shadow-page: 0 1px 3px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  --fo-shadow-popover: 0 12px 32px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  --fo-shadow-window: 0 24px 60px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.14);
+  --fo-shadow-segment: 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 0 0.5px rgba(0, 0, 0, 0.08);
+  --fo-shadow-knob: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --fo-scrim: rgba(0, 0, 0, 0.18);
+
+  /* Type: SF Pro, New York for reading, SF Mono for logs */
+  --fo-font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif;
+  --fo-font-reading: 'New York', ui-serif, 'Iowan Old Style', Georgia, serif;
+  --fo-font-mono: 'SF Mono', ui-monospace, Menlo, monospace;
+  --fo-text-large-title: 700 22px/28px var(--fo-font);
+  --fo-text-toolbar-title: 700 15px/18px var(--fo-font);
+  --fo-text-headline: 600 13px/16px var(--fo-font);
+  --fo-text-body: 400 13px/16px var(--fo-font);
+  --fo-text-callout: 400 12px/15px var(--fo-font);
+  --fo-text-caption: 400 11px/14px var(--fo-font);
+  --fo-text-reading: 400 19px/31px var(--fo-font-reading);
+  --fo-text-mono: 400 11px/17px var(--fo-font-mono);
+
+  /* Space */
+  --fo-space-1: 4px;
+  --fo-space-2: 8px;
+  --fo-space-3: 12px;
+  --fo-space-4: 16px;
+  --fo-space-5: 20px;
+  --fo-space-6: 24px;
+  --fo-space-7: 28px;
+
+  /* Radius */
+  --fo-radius-check: 4px;
+  --fo-radius-button: 6px;
+  --fo-radius-field: 7px;
+  --fo-radius-group: 10px;
+  --fo-radius-window: 12px;
+
+  /* Layout */
+  --fo-sidebar-width: 240px;
+  --fo-sidebar-min: 200px;
+  --fo-sidebar-max: 320px;
+  --fo-toolbar-height: 52px;
+  --fo-statusbar-height: 28px;
+  --fo-panel-pages: 180px;
+  --fo-panel-contents: 260px;
+  --fo-row-list: 28px;
+  --fo-row-settings: 40px;
+
+  /* Motion */
+  --fo-ease: cubic-bezier(0, 0, 0.2, 1);
+  --fo-dur-hover: 120ms;
+  --fo-dur-sheet: 240ms;
+  --fo-dur-popover: 180ms;
+  --fo-toast-ms: 4000;
+
+  color-scheme: light;
+}
+
+/* Dark: forced, or following the system unless the app forces light. The
+   two blocks hold the same values. */
+:root[data-theme='dark'] {
+  --fo-bg-window: #1e1e1f;
+  --fo-bg-sidebar: #262628;
+  --fo-bg-canvas: #141415;
+  --fo-bg-group: #262628;
+  --fo-bg-popover: #2c2c2e;
+  --fo-paper: #e9e7e2;
+  --fo-ink: #2b2b2b;
+  --fo-label: #f2f2f7;
+  --fo-label-2: #aeaeb2;
+  --fo-label-3: #7c7c80;
+  --fo-separator: rgba(255, 255, 255, 0.1);
+  --fo-fill: rgba(255, 255, 255, 0.08);
+  --fo-fill-2: rgba(255, 255, 255, 0.14);
+  --fo-selection: rgba(255, 255, 255, 0.11);
+  --fo-control: #3a3a3c;
+  --fo-control-border: rgba(255, 255, 255, 0.14);
+  --fo-segment-on: #5a5a5e;
+  --fo-accent: #3a8dff;
+  --fo-accent-text: #6cb2ff;
+  --fo-success: #32d35a;
+  --fo-success-solid: #2fb552;
+  --fo-success-fill: rgba(50, 211, 90, 0.16);
+  --fo-warning: #ffb340;
+  --fo-warning-fill: rgba(255, 179, 64, 0.14);
+  --fo-danger: #ff7a72;
+  --fo-danger-text: #ff8a84;
+  --fo-danger-solid: #d7363a;
+  --fo-danger-fill: rgba(255, 105, 97, 0.16);
+  --fo-highlight: rgba(255, 214, 10, 0.3);
+  --fo-shadow-page: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --fo-shadow-popover: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  --fo-shadow-window: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.14);
+  --fo-shadow-segment: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --fo-scrim: rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --fo-bg-window: #1e1e1f;
+    --fo-bg-sidebar: #262628;
+    --fo-bg-canvas: #141415;
+    --fo-bg-group: #262628;
+    --fo-bg-popover: #2c2c2e;
+    --fo-paper: #e9e7e2;
+    --fo-ink: #2b2b2b;
+    --fo-label: #f2f2f7;
+    --fo-label-2: #aeaeb2;
+    --fo-label-3: #7c7c80;
+    --fo-separator: rgba(255, 255, 255, 0.1);
+    --fo-fill: rgba(255, 255, 255, 0.08);
+    --fo-fill-2: rgba(255, 255, 255, 0.14);
+    --fo-selection: rgba(255, 255, 255, 0.11);
+    --fo-control: #3a3a3c;
+    --fo-control-border: rgba(255, 255, 255, 0.14);
+    --fo-segment-on: #5a5a5e;
+    --fo-accent: #3a8dff;
+    --fo-accent-text: #6cb2ff;
+    --fo-success: #32d35a;
+    --fo-success-solid: #2fb552;
+    --fo-success-fill: rgba(50, 211, 90, 0.16);
+    --fo-warning: #ffb340;
+    --fo-warning-fill: rgba(255, 179, 64, 0.14);
+    --fo-danger: #ff7a72;
+    --fo-danger-text: #ff8a84;
+    --fo-danger-solid: #d7363a;
+    --fo-danger-fill: rgba(255, 105, 97, 0.16);
+    --fo-highlight: rgba(255, 214, 10, 0.3);
+    --fo-shadow-page: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+    --fo-shadow-popover: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    --fo-shadow-window: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.14);
+    --fo-shadow-segment: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --fo-scrim: rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --fo-dur-sheet: 0ms;
+    --fo-dur-popover: 0ms;
+  }
+}

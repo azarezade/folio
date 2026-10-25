@@ -1,0 +1,16 @@
+[package]
+name = "folio-nmdl"
+description = "Scribe notebook model: pages, templates, strokes and the stroke codec."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+folio-kdf.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+flate2.workspace = true
+serde_json.workspace = true

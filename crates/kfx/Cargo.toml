@@ -1,0 +1,16 @@
+[package]
+name = "folio-kfx"
+description = "Books: format detection, DRM, metadata and covers (KFX → EPUB later)."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+flate2.workspace = true
+lopdf.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+flate2.workspace = true
